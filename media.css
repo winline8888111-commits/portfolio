@@ -1,0 +1,16 @@
+@media screen and (max-width: 500px) {
+    .hero-text{
+    width: 50%;
+    margin-top: 5%;
+    }
+    .hero-img {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 390px) {
+    .milestones-card {
+        width: 200px;
+        margin: 20px 10px;
+        display: flex;
+    }
+}
