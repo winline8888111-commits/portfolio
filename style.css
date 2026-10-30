@@ -159,6 +159,44 @@ width: 544px;
     display: inline-block;
 
 }
+/* RESUME */
+.resume {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.resume-title {
+    text-align: center;
+}
+.resume-title h2 {
+    font-weight: 700;
+    font-size: 40px;
+    margin: 15px 0 32px;
+}
+.resume-title h2 span {
+    color: #0077FF;
+}
+.resume-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+.resume-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 24px;
+    border: 1px solid #e1e7f0;
+    border-radius: 15px;
+    color: #333333;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.resume-item b {
+    color: #0077FF;
+}
+.resume-item:last-child {
+    grid-column: 1 / -1;
+}
 /* MILESTONES SECTIONS */
 .milestones {
     padding: 100px 0 150px;
