@@ -1,90 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <meta name="theme-color" content="#090d16">
+    <title>Байболот Нургазиевич — Frontend-разработчик</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   <main>
+    <main>
         <header class="container">
-                <nav>
-                    <div class="nav-logo">
-                        <img src="img/Group 8.png" alt="">
-                        <h3>Aero Vision</h3>
-                    </div>
-                    <ul class="nav-links">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Contact</li>
-                    </ul>
-                </nav>
+            <nav aria-label="Основная навигация">
+                <div class="nav-logo">
+                    <img src="img/myfoto.jpg" alt="Фото Байболота">
+                    <h3>Байболот<span>.</span></h3>
+                </div>
+                <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#services">Проекты</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
         </header>
-        <div class="hero container">
+        <section class="hero container" id="home">
             <div class="hero-text">
-                <h4>Добро пожаловать в мое портфолио</h4>
-                <h1>Привет меня зовут<br> <span>Байболот Нургазиевич</span>
-                Web Developer</h1>
+                <h4>Портфолио · 2025</h4>
+                <h1>Привет, я<br><span>Байболот</span><br>Frontend-разработчик</h1>
                 <p>Frontend-разработчик. Создаю адаптивные веб-интерфейсы, интерактивные веб-приложения на JavaScript и компоненты на React</p>
                 <div class="hero-btns">
-                    <button>Hire Me</button>
-                    <button>
-                        <span>Download CV</span>
-                        <img src="img/icon-download 1.png" alt="">
-                    </button>
+                    <a class="button button-primary" href="#contact">Связаться со мной</a>
+                    <a class="button button-secondary" href="#services">Мои проекты</a>
                 </div>
             </div>
             <div class="hero-img">
-                <img src="img/myfoto.jpg" alt="Profile photo">
+                <img src="img/myfoto.jpg" alt="Фото Байболота">
             </div>
-        </div>
-        <section class="services container">
+        </section>
+        <section class="services container" id="services">
             <div class="services-title">
-                <h4>services</h4>
-                <h2>Exploring My Design <span>Skills</span></h2>
-                <p>We transform your ideas into a distinctive web project that both inspires you and captivates your customers</p>
+                <h4>Мои проекты</h4>
+                <h2>Создаю полезные <span>веб-продукты</span></h2>
+                <p>Практические проекты, в которых сочетаются чистый код, понятный интерфейс и внимание к деталям.</p>
             </div>
             <div class="services-cards">
-                <div class="services-card">
-                    <img src="img/icon-ser.png" alt="icon">
+                <article class="services-card">
                     <h3>Интерактивный Web-Калькулятор</h3>
-                        <p>Самостоятельный проект на чистом JavaScript. Полностью адаптивный дизайн под смартфоны и ПК. Выполняет базовые и сложные вычисления.</p>
-
-                    <a href="#">
-                    <span>Learn More</span>
-                    <img src="img/strelka.png" alt="strelka">
-                    </a>
-                </div>
-                <div class="services-card">
-                    <img src="img/icon-ser.png" alt="icon">
+                    <p>Самостоятельный проект на чистом JavaScript. Полностью адаптивный дизайн под смартфоны и ПК. Выполняет базовые и сложные вычисления.</p>
+                    <a href="https://raw.githack.com/winline8888111-commits/simple_calculator/main/mobile.html" target="_blank" rel="noopener noreferrer" aria-label="Перейти к калькулятору">Перейти к калькулятору</a>
+                </article>
+                <article class="services-card">
                     <h3>Расчетная система (C# + Claude AI)</h3>
-                        <p>Продвинутый калькулятор. Логика спроектирована на C# при поддержке ИИ Claude для оптимизации бэкенд-задач.</p>
-
-                    <a href="#">
-                    <span>Learn More</span>
-                    <img src="img/strelka.png" alt="strelka">
-                    </a>
-                </div>
-                <div class="services-card">
-                    <img src="img/icon-ser.png" alt="icon">
+                    <p>Продвинутый калькулятор. Логика спроектирована на C# при поддержке ИИ Claude для оптимизации бэкенд-задач.</p>
+                    <a href="#contact">Обсудить проект</a>
+                </article>
+                <article class="services-card">
                     <h3>Интерактивный скрипт / Пранк-сайт</h3>
-                        <p>Креативный промо-ресурс для демонстрации динамического изменения DOM-структуры сайта на JS с использованием анимаций.</p>
-
-                    <a href="#">
-                    <span>Learn More</span>
-                    <img src="img/strelka.png" alt="strelka">
-                    </a>
-                </div>
+                    <p>Креативный промо-ресурс для демонстрации динамического изменения DOM-структуры сайта на JS с использованием анимаций.</p>
+                    <a href="#contact">Обсудить проект</a>
+                </article>
             </div>
-
         </section>
-        <section class="resume container">
+        <section class="resume container" id="about">
             <div class="resume-title">
                 <h2>Моё <span>резюме</span></h2>
             </div>
@@ -96,22 +82,41 @@
                 <p class="resume-item"><b>Опыт</b><span>3 месяца интенсивного обучения на IT-курсах Frontend-разработки. Умею переносить макеты в чистый код и деплоить проекты в сеть.</span></p>
             </div>
         </section>
-   </main> 
+    </main>
     <footer>
-        <div class="foot-text">
+        <div class="foot-text" id="contact">
             <div class="foot-logo">
-                <img src="img/Group 8.png" alt="">
-                <h3>Aero Vision</h3>
-                <p>© Copyright 2023. All Rights Reserved.</p>
-                </div>  
+                <img src="img/myfoto.jpg" alt="Фото Байболота">
+                <h3>Байболот<span>.</span></h3>
+                <p>© 2025 · Создано с вниманием к деталям.</p>
             </div>
-          <div class="footus">
-                <p>follow us:</p>
-                <img src="img/facebook icon.png" alt="">
-                <img src="img/icon linkedin.png" alt="">
-                <img src="img/x.png" alt="">
-                <img src="img/icon email.png" alt="">
+        </div>
+        <div class="footus">
+            <p>Связаться:</p>
+            <a href="mailto:bajbolot92@gmail.com">Email</a>
+            <a href="https://t.me/bxww_10" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://wa.me/996500585033" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="#home">Наверх ↑</a>
         </div>
     </footer>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!isExpanded));
+            navToggle.setAttribute('aria-label', isExpanded ? 'Открыть меню' : 'Закрыть меню');
+            navLinks.classList.toggle('is-open', !isExpanded);
+        });
+
+        navLinks.addEventListener('click', (event) => {
+            if (event.target.closest('a')) {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Открыть меню');
+                navLinks.classList.remove('is-open');
+            }
+        });
+    </script>
 </body>
 </html>
