@@ -14,32 +14,44 @@
 <body>
     <main>
         <header class="container">
-            <nav aria-label="Основная навигация">
+            <nav aria-label="Основная навигация" data-i18n-aria-label="navLabel">
                 <div class="nav-logo">
                     <img src="img/myfoto.jpg" alt="Фото Байболота">
                     <h3>Байболот<span>.</span></h3>
                 </div>
-                <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#services">Проекты</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#home" data-i18n="navHome">Главная</a></li>
+                    <li><a href="#about" data-i18n="navAbout">Обо мне</a></li>
+                    <li><a href="#services" data-i18n="navProjects">Проекты</a></li>
+                    <li><a href="#contact" data-i18n="navContact">Контакты</a></li>
                 </ul>
+                <div class="nav-actions">
+                    <label class="visually-hidden" for="language-select" data-i18n="languageLabel">Язык</label>
+                    <select class="language-select" id="language-select" aria-label="Язык" data-i18n-aria-label="languageLabel">
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="kg">KG</option>
+                    </select>
+                    <button class="theme-toggle" type="button" aria-pressed="false" data-i18n-aria-label="themeToLight">
+                        <span class="theme-icon" aria-hidden="true">☀</span>
+                        <span data-i18n="themeToLight">Светлая тема</span>
+                    </button>
+                    <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-links" data-i18n-aria-label="menuOpen">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </nav>
         </header>
         <section class="hero container" id="home">
             <div class="hero-text">
-                <h4>Портфолио · 2026</h4>
-                <h1>Привет, я<br><span>Байболот</span><br>Frontend-разработчик</h1>
-                <p>Frontend-разработчик. Создаю адаптивные веб-интерфейсы, интерактивные веб-приложения на JavaScript и компоненты на React</p>
+                <h4 data-i18n="portfolioYear">Портфолио · 2026</h4>
+                <h1><span data-i18n="heroGreeting">Привет, я</span><br><span>Байболот</span><br><span data-i18n="heroRole">Frontend-разработчик</span></h1>
+                <p data-i18n="heroDescription">Frontend-разработчик. Создаю адаптивные веб-интерфейсы, интерактивные веб-приложения на JavaScript и компоненты на React</p>
                 <div class="hero-btns">
-                    <a class="button button-primary" href="#contact">Связаться со мной</a>
-                    <a class="button button-secondary" href="#services">Мои проекты</a>
+                    <a class="button button-primary" href="#contact" data-i18n="contactMe">Связаться со мной</a>
+                    <a class="button button-secondary" href="#services" data-i18n="myProjects">Мои проекты</a>
                 </div>
             </div>
             <div class="hero-img">
@@ -48,43 +60,43 @@
         </section>
         <section class="services container" id="services">
             <div class="services-title">
-                <h4>Мои проекты</h4>
-                <h2>Создаю полезные <span>веб-продукты</span></h2>
-                <p>Практические проекты, в которых сочетаются чистый код, понятный интерфейс и внимание к деталям.</p>
+                <h4 data-i18n="myProjects">Мои проекты</h4>
+                <h2><span data-i18n="projectsHeading">Создаю полезные</span> <span data-i18n="webProducts">веб-продукты</span></h2>
+                <p data-i18n="projectsDescription">Практические проекты, в которых сочетаются чистый код, понятный интерфейс и внимание к деталям.</p>
             </div>
             <div class="services-cards">
                 <article class="services-card">
-                    <h3>Интерактивный Web-Калькулятор</h3>
-                    <p>Самостоятельный проект на чистом JavaScript. Полностью адаптивный дизайн под смартфоны и ПК. Выполняет базовые и сложные вычисления.</p>
-                    <a href="https://raw.githack.com/winline8888111-commits/simple_calculator/main/mobile.html" target="_blank" rel="noopener noreferrer" aria-label="Перейти к калькулятору">Перейти к калькулятору</a>
+                    <h3 data-i18n="project1Title">Интерактивный Web-Калькулятор</h3>
+                    <p data-i18n="project1Description">Самостоятельный проект на чистом JavaScript. Полностью адаптивный дизайн под смартфоны и ПК. Выполняет базовые и сложные вычисления.</p>
+                    <a href="https://raw.githack.com/winline8888111-commits/simple_calculator/main/mobile.html" target="_blank" rel="noopener noreferrer" aria-label="Перейти к калькулятору" data-i18n="project1Link" data-i18n-aria-label="project1Link">Перейти к калькулятору</a>
                 </article>
                 <article class="services-card">
-                    <h3>Калькулятор и конвертер</h3>
-                    <p>Веб-приложение с калькулятором, конвертером валют, решением уравнений и расчётом топлива.</p>
-                    <a href="https://calculatorcld-2pyj.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Открыть калькулятор">Открыть калькулятор</a>
+                    <h3 data-i18n="project2Title">Калькулятор и конвертер</h3>
+                    <p data-i18n="project2Description">Веб-приложение с калькулятором, конвертером валют, решением уравнений и расчётом топлива.</p>
+                    <a href="https://calculatorcld-2pyj.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Открыть калькулятор" data-i18n="project2Link" data-i18n-aria-label="project2Link">Открыть калькулятор</a>
                 </article>
                 <article class="services-card">
-                    <h3>Интерактивный скрипт / Пранк-сайт</h3>
-                    <p>Креативный промо-ресурс для демонстрации динамического изменения DOM-структуры сайта на JS с использованием анимаций.</p>
-                    <a href="#contact">Обсудить проект</a>
+                    <h3 data-i18n="project3Title">Интерактивный скрипт / Пранк-сайт</h3>
+                    <p data-i18n="project3Description">Креативный промо-ресурс для демонстрации динамического изменения DOM-структуры сайта на JS с использованием анимаций.</p>
+                    <a href="#contact" data-i18n="project3Link">Обсудить проект</a>
                 </article>
                 <article class="services-card">
-                    <h3>To Do List — список задач</h3>
-                    <p>Приложение на React для управления задачами: их можно добавлять, отмечать выполненными, удалять и искать. Список и история действий сохраняются в браузере через localStorage.</p>
-                    <a href="https://todo-ivory-zeta-94.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Открыть To Do List">Открыть To Do List</a>
+                    <h3 data-i18n="project4Title">To Do List — список задач</h3>
+                    <p data-i18n="project4Description">Приложение на React для управления задачами: их можно добавлять, отмечать выполненными, удалять и искать. Список и история действий сохраняются в браузере через localStorage.</p>
+                    <a href="https://todo-ivory-zeta-94.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Открыть To Do List" data-i18n="project4Link" data-i18n-aria-label="project4Link">Открыть To Do List</a>
                 </article>
             </div>
         </section>
         <section class="resume container" id="about">
             <div class="resume-title">
-                <h2>Моё <span>резюме</span></h2>
+                <h2><span data-i18n="myResume">Моё</span> <span data-i18n="resume">резюме</span></h2>
             </div>
             <div class="resume-details">
-                <p class="resume-item"><b>ФИО</b><span>Байболот Нургазиевич</span></p>
-                <p class="resume-item"><b>Возраст</b><span>15 лет</span></p>
-                <p class="resume-item"><b>Стек технологий</b><span>HTML5, CSS3, JavaScript, React, Git, GitHub, Vercel</span></p>
-                <p class="resume-item"><b>Инструменты</b><span>Figma, Canva, Claude AI, ChatGPT (использую для ускорения написания кода)</span></p>
-                <p class="resume-item"><b>Опыт</b><span>3 месяца интенсивного обучения на IT-курсах Frontend-разработки. Умею переносить макеты в чистый код и деплоить проекты в сеть.</span></p>
+                <p class="resume-item"><b data-i18n="fullName">ФИО</b><span>Байболот Нургазиевич</span></p>
+                <p class="resume-item"><b data-i18n="age">Возраст</b><span data-i18n="ageValue">15 лет</span></p>
+                <p class="resume-item"><b data-i18n="techStack">Стек технологий</b><span>HTML5, CSS3, JavaScript, React, Git, GitHub, Vercel</span></p>
+                <p class="resume-item"><b data-i18n="tools">Инструменты</b><span data-i18n="toolsValue">Figma, Canva, Claude AI, ChatGPT (использую для ускорения написания кода)</span></p>
+                <p class="resume-item"><b data-i18n="experience">Опыт</b><span data-i18n="experienceValue">3 месяца интенсивного обучения на IT-курсах Frontend-разработки. Умею переносить макеты в чистый код и деплоить проекты в сеть.</span></p>
             </div>
         </section>
     </main>
@@ -93,32 +105,136 @@
             <div class="foot-logo">
                 <img src="img/myfoto.jpg" alt="Фото Байболота">
                 <h3>Байболот<span>.</span></h3>
-                <p>© 2025 · Создано с вниманием к деталям.</p>
+                <p data-i18n="copyright">© 2026 · Создано с вниманием к деталям.</p>
             </div>
         </div>
         <div class="footus">
-            <p>Связаться:</p>
+            <p data-i18n="getInTouch">Связаться:</p>
             <a href="mailto:bajbolot92@gmail.com">Email</a>
             <a href="https://t.me/bxww_10" target="_blank" rel="noopener noreferrer">Telegram</a>
             <a href="https://wa.me/996500585033" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a href="#home">Наверх ↑</a>
+            <a href="#home" data-i18n="backToTop">Наверх ↑</a>
         </div>
     </footer>
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
+        const languageSelect = document.querySelector('.language-select');
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+
+        const translations = {
+            ru: {
+                pageTitle: 'Байболот Нургазиевич — Frontend-разработчик',
+                navLabel: 'Основная навигация', navHome: 'Главная', navAbout: 'Обо мне', navProjects: 'Проекты', navContact: 'Контакты',
+                languageLabel: 'Язык', themeToLight: 'Светлая тема', themeToDark: 'Темная тема', menuOpen: 'Открыть меню', menuClose: 'Закрыть меню',
+                portfolioYear: 'Портфолио · 2026', heroGreeting: 'Привет, я', heroRole: 'Frontend-разработчик',
+                heroDescription: 'Frontend-разработчик. Создаю адаптивные веб-интерфейсы, интерактивные веб-приложения на JavaScript и компоненты на React',
+                contactMe: 'Связаться со мной', myProjects: 'Мои проекты', projectsHeading: 'Создаю полезные', webProducts: 'веб-продукты',
+                projectsDescription: 'Практические проекты, в которых сочетаются чистый код, понятный интерфейс и внимание к деталям.',
+                project1Title: 'Интерактивный Web-Калькулятор', project1Description: 'Самостоятельный проект на чистом JavaScript. Полностью адаптивный дизайн под смартфоны и ПК. Выполняет базовые и сложные вычисления.', project1Link: 'Перейти к калькулятору',
+                project2Title: 'Калькулятор и конвертер', project2Description: 'Веб-приложение с калькулятором, конвертером валют, решением уравнений и расчётом топлива.', project2Link: 'Открыть калькулятор',
+                project3Title: 'Интерактивный скрипт / Пранк-сайт', project3Description: 'Креативный промо-ресурс для демонстрации динамического изменения DOM-структуры сайта на JS с использованием анимаций.', project3Link: 'Обсудить проект',
+                project4Title: 'To Do List — список задач', project4Description: 'Приложение на React для управления задачами: их можно добавлять, отмечать выполненными, удалять и искать. Список и история действий сохраняются в браузере через localStorage.', project4Link: 'Открыть To Do List',
+                myResume: 'Моё', resume: 'резюме', fullName: 'ФИО', age: 'Возраст', ageValue: '15 лет', techStack: 'Стек технологий', tools: 'Инструменты',
+                toolsValue: 'Figma, Canva, Claude AI, ChatGPT (использую для ускорения написания кода)', experience: 'Опыт',
+                experienceValue: '3 месяца интенсивного обучения на IT-курсах Frontend-разработки. Умею переносить макеты в чистый код и деплоить проекты в сеть.',
+                copyright: '© 2026 · Создано с вниманием к деталям.', getInTouch: 'Связаться:', backToTop: 'Наверх ↑',
+                photoAlt: 'Фото Байболота'
+            },
+            en: {
+                pageTitle: 'Baybolot Nurgazievich — Frontend Developer',
+                navLabel: 'Main navigation', navHome: 'Home', navAbout: 'About me', navProjects: 'Projects', navContact: 'Contact',
+                languageLabel: 'Language', themeToLight: 'Light theme', themeToDark: 'Dark theme', menuOpen: 'Open menu', menuClose: 'Close menu',
+                portfolioYear: 'Portfolio · 2026', heroGreeting: "Hi, I'm", heroRole: 'Frontend Developer',
+                heroDescription: 'Frontend developer creating responsive web interfaces, interactive JavaScript applications, and React components.',
+                contactMe: 'Contact me', myProjects: 'My projects', projectsHeading: 'Building useful', webProducts: 'web products',
+                projectsDescription: 'Practical projects combining clean code, clear interfaces, and attention to detail.',
+                project1Title: 'Interactive Web Calculator', project1Description: 'An independent project built with pure JavaScript. Fully responsive on phones and desktops, with basic and advanced calculations.', project1Link: 'Open calculator',
+                project2Title: 'Calculator and Converter', project2Description: 'A web app featuring a calculator, currency converter, equation solver, and fuel calculator.', project2Link: 'Open calculator',
+                project3Title: 'Interactive Script / Prank Site', project3Description: 'A creative promotional site demonstrating dynamic DOM updates with JavaScript animations.', project3Link: 'Discuss a project',
+                project4Title: 'To Do List', project4Description: 'A React task manager: add, complete, delete, and search tasks. The list and activity history are saved in the browser using localStorage.', project4Link: 'Open To Do List',
+                myResume: 'My', resume: 'resume', fullName: 'Name', age: 'Age', ageValue: '15 years old', techStack: 'Tech stack', tools: 'Tools',
+                toolsValue: 'Figma, Canva, Claude AI, ChatGPT (used to speed up coding)', experience: 'Experience',
+                experienceValue: 'Three months of intensive Frontend development training. I can turn designs into clean code and deploy projects online.',
+                copyright: '© 2026 · Made with attention to detail.', getInTouch: 'Get in touch:', backToTop: 'Back to top ↑',
+                photoAlt: 'Photo of Baybolot'
+            },
+            kg: {
+                pageTitle: 'Байболот Нургазиевич — Frontend иштеп чыгуучу',
+                navLabel: 'Негизги навигация', navHome: 'Башкы бет', navAbout: 'Мен жөнүндө', navProjects: 'Долбоорлор', navContact: 'Байланыш',
+                languageLabel: 'Тил', themeToLight: 'Ачык тема', themeToDark: 'Караңгы тема', menuOpen: 'Менюну ачуу', menuClose: 'Менюну жабуу',
+                portfolioYear: 'Портфолио · 2026', heroGreeting: 'Салам, мен', heroRole: 'Frontend иштеп чыгуучумун',
+                heroDescription: 'Frontend иштеп чыгуучумун. Ыңгайлашкан веб-интерфейстерди, JavaScript веб-тиркемелерин жана React компоненттерин жасайм.',
+                contactMe: 'Байланышуу', myProjects: 'Долбоорлорум', projectsHeading: 'Пайдалуу', webProducts: 'веб-продукттарды жасайм',
+                projectsDescription: 'Таза код, түшүнүктүү интерфейс жана майда-чүйдөсүнө көңүл бурууну айкалыштырган практикалык долбоорлор.',
+                project1Title: 'Интерактивдүү веб-калькулятор', project1Description: 'Таза JavaScript менен жасалган жеке долбоор. Телефондорго жана компьютерлерге ылайыкташкан, жөнөкөй жана татаал эсептөөлөрдү аткарат.', project1Link: 'Калькуляторду ачуу',
+                project2Title: 'Калькулятор жана конвертер', project2Description: 'Калькулятору, валюта конвертери, теңдеме чыгаргычы жана күйүүчү май эсептегичи бар веб-тиркеме.', project2Link: 'Калькуляторду ачуу',
+                project3Title: 'Интерактивдүү скрипт / Пранк-сайт', project3Description: 'JavaScript анимациялары менен сайттын DOM түзүмүн динамикалык өзгөртүүнү көрсөткөн чыгармачыл промо-сайт.', project3Link: 'Долбоорду талкуулоо',
+                project4Title: 'To Do List — тапшырмалар тизмеси', project4Description: 'React менен жасалган тапшырма башкаргыч: тапшырмаларды кошуп, бүтүрүп, өчүрүп жана издей аласыз. Тизме жана аракеттер тарыхы браузердеги localStorage ичинде сакталат.', project4Link: 'To Do List ачуу',
+                myResume: 'Менин', resume: 'резюмем', fullName: 'Аты-жөнү', age: 'Жашы', ageValue: '15 жаш', techStack: 'Технологиялар', tools: 'Куралдар',
+                toolsValue: 'Figma, Canva, Claude AI, ChatGPT (код жазууну тездетүү үчүн колдоном)', experience: 'Тажрыйба',
+                experienceValue: 'Frontend иштеп чыгуу боюнча IT курстарында 3 ай интенсивдүү окудум. Макеттерди таза кодго айландырып, долбоорлорду интернетке жайгаштыра алам.',
+                copyright: '© 2026 · Ар бир майда-чүйдөсүнө көңүл бурулуп жасалды.', getInTouch: 'Байланыш:', backToTop: 'Жогору ↑',
+                photoAlt: 'Байболоттун сүрөтү'
+            }
+        };
+
+        function setLanguage(language) {
+            const messages = translations[language];
+            document.documentElement.lang = language === 'kg' ? 'ky' : language;
+            document.title = messages.pageTitle;
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                element.textContent = messages[element.dataset.i18n];
+            });
+            document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+                element.setAttribute('aria-label', messages[element.dataset.i18nAriaLabel]);
+            });
+            document.querySelectorAll('img[alt]').forEach((image) => {
+                image.alt = messages.photoAlt;
+            });
+            languageSelect.value = language;
+            localStorage.setItem('portfolio-language', language);
+        }
+
+        function setTheme(theme) {
+            const isLight = theme === 'light';
+            document.documentElement.dataset.theme = theme;
+            themeToggle.setAttribute('aria-pressed', String(isLight));
+            themeToggle.querySelector('.theme-icon').textContent = isLight ? '☾' : '☀';
+            const key = isLight ? 'themeToDark' : 'themeToLight';
+            themeToggle.querySelector('[data-i18n]').dataset.i18n = key;
+            themeToggle.querySelector('[data-i18n]').textContent = translations[languageSelect.value][key];
+            themeToggle.setAttribute('aria-label', translations[languageSelect.value][key]);
+            themeColor.content = isLight ? '#f5f7fb' : '#090d16';
+            localStorage.setItem('portfolio-theme', theme);
+        }
+
+        const savedLanguage = localStorage.getItem('portfolio-language');
+        setLanguage(translations[savedLanguage] ? savedLanguage : 'ru');
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        setTheme(savedTheme === 'light' ? 'light' : 'dark');
+
+        languageSelect.addEventListener('change', () => {
+            setLanguage(languageSelect.value);
+            setTheme(document.documentElement.dataset.theme);
+        });
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+        });
 
         navToggle.addEventListener('click', () => {
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', String(!isExpanded));
-            navToggle.setAttribute('aria-label', isExpanded ? 'Открыть меню' : 'Закрыть меню');
+            navToggle.setAttribute('aria-label', translations[languageSelect.value][isExpanded ? 'menuOpen' : 'menuClose']);
             navLinks.classList.toggle('is-open', !isExpanded);
         });
 
         navLinks.addEventListener('click', (event) => {
             if (event.target.closest('a')) {
                 navToggle.setAttribute('aria-expanded', 'false');
-                navToggle.setAttribute('aria-label', 'Открыть меню');
+                navToggle.setAttribute('aria-label', translations[languageSelect.value].menuOpen);
                 navLinks.classList.remove('is-open');
             }
         });
