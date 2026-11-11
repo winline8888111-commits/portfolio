@@ -24,7 +24,16 @@
 }
 
 @media (max-width: 780px) {
+    html {
+        scroll-padding-top: 94px;
+    }
+
+    main {
+        padding-top: 82px;
+    }
+
     nav {
+        width: min(100% - 40px, 540px);
         min-height: 82px;
     }
 
