@@ -35,7 +35,8 @@
     nav {
         position: relative;
         z-index: 20;
-        width: min(100% - 40px, 540px);
+        width: calc(100% - 40px);
+        max-width: 540px;
         height: 72px;
         min-height: 72px;
         gap: 12px;
@@ -194,6 +195,7 @@
 
     nav {
         width: calc(100% - 32px);
+        max-width: none;
         height: 64px;
         min-height: 64px;
     }

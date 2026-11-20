@@ -74,7 +74,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    width: min(1120px, calc(100% - 64px));
+    width: calc(100% - 64px);
+    max-width: 1120px;
     min-height: 100px;
     margin: 0 auto;
     border-bottom: 1px solid var(--border);
