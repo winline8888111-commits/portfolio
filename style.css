@@ -61,6 +61,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 0 32px;
     background: color-mix(in srgb, var(--background) 88%, transparent);
     backdrop-filter: blur(14px);
 }
@@ -74,8 +75,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    width: calc(100% - 64px);
-    max-width: 1120px;
+    width: 100%;
     min-height: 100px;
     margin: 0 auto;
     border-bottom: 1px solid var(--border);
